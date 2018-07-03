@@ -103,8 +103,8 @@ if (isset($porto_woocommerce_loop['view']) && $porto_woocommerce_loop['view']) {
 if (isset($woocommerce_loop['category-view']) && $woocommerce_loop['category-view'])
     $classes[] = $woocommerce_loop['category-view'];
 
-$classes[] = 'pcols-lg-' . '6';
-if (!(isset($porto_woocommerce_loop['view']) && $porto_woocommerce_loop['view'] == 'product-carousel')) $classes[] = 'pcols-md-' . '5';
+$classes[] = 'pcols-lg-' . $cols;
+if (!(isset($porto_woocommerce_loop['view']) && $porto_woocommerce_loop['view'] == 'product-carousel')) $classes[] = 'pcols-md-' . $cols_md;
 $classes[] = 'pcols-xs-' . $cols_xs;
 $classes[] = 'pcols-ls-' . $cols_ls;
 $classes[] = 'pwidth-lg-' . $item_width;
@@ -115,15 +115,19 @@ $classes[] = 'pwidth-ls-' . $item_width_ls;
 $options = array();
 $options['themeConfig'] = true;
 if (isset($porto_woocommerce_loop['view']) && $porto_woocommerce_loop['view'] == 'product-carousel') {
-    $options['lg'] = 6;
+    $options['lg'] = (int)$cols;
     $options['md'] = (int)$cols_md;
     $options['sm'] = (int)$cols_xs;
 }
 if (isset($porto_woocommerce_loop['view']) && $porto_woocommerce_loop['view'] == 'products-slider') {
-    $options['lg'] = 6;
+    /*$options['lg'] = (int)$cols;
     $options['md'] = (int)$cols_md;
     $options['xs'] = (int)$cols_xs;
-    $options['ls'] = (int)$cols_ls;
+    $options['ls'] = (int)$cols_ls;*/
+    $options['lg'] = 6;
+    $options['md'] = 5;
+    $options['xs'] = 3;
+    $options['ls'] = 2;
     if (!isset($porto_woocommerce_loop['navigation']) || (isset($porto_woocommerce_loop['navigation']) && $porto_woocommerce_loop['navigation']))
         $options['nav'] = true;
     if (isset($porto_woocommerce_loop['pagination']) && $porto_woocommerce_loop['pagination'])

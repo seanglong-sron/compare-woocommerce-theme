@@ -39,16 +39,14 @@ if ( version_compare( WC_VERSION, '3.2', '>=' ) ) {
 <?php endif; ?>
 	<?php do_action( 'woocommerce_order_details_before_order_table', $order ); ?>
 
-	<h2 class="woocommerce-order-details__title hidden"><?php _e( 'Order Details', 'porto' ); ?></h2>
+	<h2 class="woocommerce-order-details__title"><?php _e( 'Order Details', 'porto' ); ?></h2>
 	
-	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details table-bordered" style="width:1000px;">
+	<table class="woocommerce-table woocommerce-table--order-details shop_table order_details" style="width:600px;">
 	
 		<thead>
 			<tr>
-				<th style="text-align:center"><?php _e( 'Product', 'porto' ); ?></th>
-				<th width="20%;" style="text-align:center"><?php _e( 'Price', 'porto' ); ?></th>
-				<th width="20%;" style="text-align:center"><?php _e( 'Quantity', 'porto' ); ?></th>
-				<th width="20%;" style="text-align:center"><?php _e( 'Total', 'porto' ); ?></th>
+				<th class="woocommerce-table__product-name product-name"><?php _e( 'Product', 'porto' ); ?></th>
+				<th class="woocommerce-table__product-table product-total"><?php _e( 'Total', 'porto' ); ?></th>
 			</tr>
 		</thead>
 		
@@ -77,8 +75,8 @@ if ( version_compare( WC_VERSION, '3.2', '>=' ) ) {
 				foreach ( $order->get_order_item_totals() as $key => $total ) {
 					?>
 					<tr>
-						<th colspan="3" scope="row" style="text-align:right"><?php echo $total['label']; ?></th>
-						<td style="text-align:right"><?php echo $total['value']; ?></td>
+						<th scope="row"><?php echo $total['label']; ?></th>
+						<td><?php echo $total['value']; ?></td>
 					</tr>
 					<?php
 				}

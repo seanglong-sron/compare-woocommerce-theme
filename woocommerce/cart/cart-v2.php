@@ -104,7 +104,7 @@ $porto_woo_version = porto_get_woo_version_number();
 								do_action( 'woocommerce_cart_contents' );
 								?>
 								<tr>
-									<td colspan="6" class="actions">
+									<td colspan="6" class="actions hidden">
 										<?php if ( version_compare($porto_woo_version, '2.5', '<') ? WC()->cart->coupons_enabled() : wc_coupons_enabled() ) { ?>
 											<div class="accordion">
 												<div class="card card-default">

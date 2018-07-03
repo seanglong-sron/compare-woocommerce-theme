@@ -29,9 +29,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<h3><?php _e( 'Billing &amp; Shipping', 'porto' ); ?></h3>
 
 	<?php else : ?>
-
-		<h3><?php _e( 'Billing details', 'porto' ); ?></h3>
-
+		
+		<?php if ( ! is_user_logged_in() && $checkout->is_registration_enabled() ) : ?>
+					
+			<h3><?php _e( 'New Customer', 'porto' ); ?></h3>
+		
+		<?php else : ?>
+			
+			<h3><?php _e( 'Billing details', 'porto' ); ?></h3>
+			
+		<?php endif; ?>
+		
 	<?php endif; ?>
 
 	<?php do_action( 'woocommerce_before_checkout_billing_form', $checkout ); ?>

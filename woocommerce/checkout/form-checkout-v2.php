@@ -35,7 +35,7 @@ $get_checkout_url = version_compare($porto_woo_version, '2.5', '<') ? apply_filt
 
 		<?php endif; ?>
 
-		<div class="checkout-order-review align-left col-lg-8 hidden">
+		<div class="checkout-order-review align-left col-lg-8">
 
 			<?php do_action( 'woocommerce_checkout_before_order_review' ); ?>
 

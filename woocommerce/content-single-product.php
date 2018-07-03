@@ -110,7 +110,7 @@ if ($termID[0] != ''){
 
         <div class="row">
 
-            <div class="col-lg-6 summary-before">
+            <div class="col-lg-4 summary-before">
 
                 <?php
 
@@ -134,7 +134,7 @@ if ($termID[0] != ''){
 
 
 
-            <div class="col-lg-6 summary entry-summary">
+            <div class="col-lg-5 summary entry-summary">
 
                 <?php
 
@@ -165,20 +165,42 @@ if ($termID[0] != ''){
                     do_action( 'woocommerce_single_product_summary' );
 
                 ?>
-                <div class="row" style="margin-top: 10px;border: 1px solid #d6d6d6; padding: 10px;margin:10px auto;">
-                    <h3 style="font-size: 15px;">Delivery Options Available: Standard delivery within 2-4 working days</h3>
-                    <div class="col-lg-4" style="font-size: 15px;color: #000;">
-                        <i class="fa fa-car"></i>
-                        <span> Standard delivery</span>
+                
+            </div>
+            <div class="col-lg-3" >
+                <div class="side-row" style="border: 1px solid #ddd;padding: 15px;margin-bottom: 30px;">
+                    <h3 style="font-size: 15px;font-weight: 700;margin: 15px auto;">Available Payment Gateway</h3>
+                    <div>
+                        <!-- <img src="http://shopbabyworld.com/wp-content/uploads/2018/04/Untitled-1.png" width="100%"> -->
+                        <img src="http://shopbabyworld.com/wp-content/uploads/2018/06/gateway.png" width="100%">
                     </div>
-                    <div class="col-lg-4" style="font-size: 15px;color: #000;">
-                        <i class="fa fa-mouse-pointer"></i>
-                        <span> Click and Collect</span>  
-                    </div>
-                    <div class="col-lg-4" style="font-size: 15px;color: #000;">
-                        <i class="fa fa-plane"></i>
-                        <span> International delivery</span> 
-                    </div>
+                    <h3 style="font-size: 15px;margin: 15px auto;font-weight: 700;">Available Shipping Method</h3>
+                    <p style="margin-bottom: 15px;color: #333;font-size: 15px;">Phnom Penh</p>
+                    <ul style="padding-left: 20px;">
+                        <li>
+                            <div style="color: #333;">
+                                <p style="margin-bottom: 15px;font-size: 1em;">Free Delivery (48 hrs)</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div style="color: #333;">
+                                <p style="margin-bottom: 15px;font-size: 1em;">Express Delivery (4 hrs)</p> 
+                            </div>
+                        </li>
+                    </ul>
+                    <p style="margin-bottom: 15px;color: #333;font-size: 15px;">Province Delivery (2-5 days)</p>
+                    <ul style="padding-left: 20px;margin-bottom: 0;">
+                        <li>
+                            <div style="color: #333;">
+                                <p style="margin-bottom: 15px;">Local Pickup</p> 
+                            </div>
+                        </li>
+                        <li>
+                            <div style="color: #333;">
+                                <p style="margin-bottom: 15px;">Delivery to Customer</p> 
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
